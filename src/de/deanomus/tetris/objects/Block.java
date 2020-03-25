@@ -7,26 +7,25 @@ import java.util.Arrays;
 
 public class Block {
 
-    private int[][] ib;
-    private Color color;
+    protected int[][] ib;
+    protected Color color;
 
     public Block() {
     }
 
-    protected void setup(int[][] ib, Color color) {
-        this.ib = ib;
-        this.color = color;
-    }
-
     @Override
     public String toString() {
+        String out = "First:\n";
+        out += Helper.ArrayToString(ib);
 
-        return Helper.ArrayToString(ib);
+        out += "\nSecond:\n";
+        out += Helper.ArrayToString(Helper.rotateArray(0, ib));
+        return out;
     }
 
 
     public void rotate(int times) {
-
+        ib = Helper.rotateArray(times, ib);
     }
 
 
