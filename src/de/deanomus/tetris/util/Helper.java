@@ -9,7 +9,7 @@ public class Helper {
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
                 out += array[i][j];
-                if(j != array[i].length-1) out += ", ";
+                if (j != array[i].length - 1) out += ", ";
             }
             out += "\n";
         }
@@ -20,7 +20,7 @@ public class Helper {
         int[][] newArray = new int[Array.length][Array[0].length];
         for (int i = 0; i < Array.length; i++) {
             for (int j = 0; j < Array.length; j++) {
-                newArray[j][Array.length-1-i] = Array[i][j];
+                newArray[j][Array.length - 1 - i] = Array[i][j];
             }
         }
 
@@ -28,7 +28,7 @@ public class Helper {
     }
 
     public static int[][] rotateArray(int Times, int[][] Array) {
-        if(Times <= 0) return Array;
+        if (Times <= 0) return Array;
 
         int[][] newArray = new int[Array.length][Array[0].length];
         for (int i = 0; i < Array.length; i++) {
@@ -51,13 +51,13 @@ public class Helper {
     }
 
     public static int NegativePositiveChange(int i) {
-        if(i == 0) return i;
+        if (i == 0) return i;
 
-        if(i < 0) {
+        if (i < 0) {
             return Math.abs(i);
         }
 
-        if(i > 0) {
+        if (i > 0) {
             return (i - (i * 2));
         }
         return 0;
